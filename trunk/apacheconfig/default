@@ -1,0 +1,56 @@
+<VirtualHost *:8000>
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    Alias /doc/ "/usr/share/doc/"
+    <Directory "/usr/share/doc/">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+        Allow from 127.0.0.0/255.0.0.0 ::1/128
+    </Directory>
+
+    WSGIDaemonProcess seiscreen processes=2 threads=15 display-name=%{GROUP}
+    WSGIScriptAlias /seiscreen /var/www/SeiScreen/SeiScreen/wsgi.py
+    AliasMatch static/img/(.*) /var/www/SeiScreen/seiscreen/static/img/$1
+    AliasMatch static/js/(.*) /var/www/SeiScreen/seiscreen/static/js/$1
+    AliasMatch static/css/(.*) /var/www/SeiScreen/seiscreen/static/css/$1
+    AliasMatch static/js/theme/default/(.*) /var/www/SeiScreen/seiscreen/static/js/theme/default/$1
+
+    AliasMatch static/audio/(.*) /var/www/Seiscreen/seiscreen/static/audio/$1
+    AliasMatch static/admin/css/(.*) /var/www/SeiScreen/SeiScreen/media/admin/media/css/$1
+    AliasMatch static/admin/img/admin/(.*) /var/www/SeiScreen/SeiScreen/media/admin/media/img/admin/$1
+    AliasMatch static/admin/js/(.*) /var/www/SeiScreen/SeiScreen/media/admin/media/js/$1
+    AliasMatch static/admin/js/admin/(.*) /var/www/SeiScreen/SeiScreen/media/admin/media/js/admin/$1
+    AliasMatch static/admin/img/(.*) /var/www/SeiScreen/SeiScreen/media/admin/media/img/admin/$1
+
+</VirtualHost>
+

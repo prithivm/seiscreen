@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ page_title }}</title>
+<!--style-->
+<link rel="stylesheet" href="/static/css/admin_style.css" type="text/css" />
+{% block cssincludes %}{% endblock %}
+<!--JS-->
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jmousewhell.js"></script>
+<script type="text/javascript" src="/static/js/jscroll.js"></script>
+<script type="text/javascript" src="/static/js/admin.js"> </script>
+{% block jsincludes %}{% endblock %}
+
+</head>
+<body>
+	<div id="list_content" class="grid_1 m_auto content">
+		<!--HEader-->
+		<div class="left grid_1">
+			
+			<div class="m_top20 left">
+				<span class="fz24 fw red">{{ language.seiscreen }}</span><br/>
+				<span class="fz18 black">{{ page_title }}</span>
+			</div>
+			<div class="grid_2 right m_top20">
+				<div class="country b_grad m_top white fz18 radius">
+					{{ institution }} 
+					<a href='/seiscreen/logout/' id="logout_button" class="button right" >{{ language.logout }}</a>
+					<img src="/static/img/logos/{{ institution }}.png" title="" alt=""/>
+				</div>
+			</div>
+		</div>
+		<!--HEader-->
+		<!--Content-->
+		{% block specific %}{% endblock %}
+		<footer id="admin_footer" class="bottom center">
+		    <img src="/static/img/logos/OSOP SA.png" title="" alt="OSOP"/>
+		    <span id="foot_text" class="fz18">{{ language.developed }} <span class="fw">OSOP SA. Panamá</span></span>
+		</footer>
+	</div>
+</body>
+</html>

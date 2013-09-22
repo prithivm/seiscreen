@@ -1,0 +1,11 @@
+<span class="fz18 black login_field">{{ language.password }}</span> </br>
+<input id="cur_pass" name="usrname" type="password" class="login_field cpass_field"/> </br>
+<span class="fz18 black login_field">{{ language.new_password }}:</span> </br>	 
+<input id="new_pass" name="passwd" type="password" class="login_field cpass_field"/> </br>
+<span class="fz18 black login_field">{{ language.new_password_other }}:</span> </br>	
+<input id="new_pass2" name="passwd" type="password" class="login_field cpass_field"/> </br>
+<span id="change_error" class="error_message">{{ language.try_again }}</span>
+<span id="change_success" class="success_message">{{ language.password_changed }}</span>
+<span id="change_message" class="error_message"></span>
+<input id="cpass_button" type="submit" class="button" value="Change" />
+{% csrf_token %}

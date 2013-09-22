@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ language.seiscreen }}</title>
+<!--style-->
+<link rel="stylesheet" href="/static/css/admin_style.css" type="text/css" />
+</head>
+<body>
+	<div id="list_content" class="grid_1 m_auto content">
+		<!--HEader-->
+		<div class="left grid_1">
+			<div class="m_top20 left">
+				<span class="fz24 fw red">{{ language.seiscreen }}</span><br/>
+				<span class="fz18 black">{{ language.login }}</span>
+			</div>
+			
+			<div id="login_box">
+				<div id="login_labels">
+					<form action="/seiscreen/login/" method="post">
+						<span class="fz18 black top login_field">{{ language.username }}:</span>
+						<input name="usrname" type="text" class="login_field"/>
+						<span class="fz18 black bottom login_field">{{ language.password }}:</span>	
+						<input name="passwd" type="password" class="login_field"/>
+						<input id="login_button" type="submit" class="button" value="{{ language.sign_in }}" />
+						<input name="next" type="hidden" value={{ next }} />
+						{% csrf_token %}
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--HEader-->
+		<!--Content-->
+		
+      
+	</div>
+</body>
+</html>

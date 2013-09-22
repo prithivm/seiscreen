@@ -1,0 +1,65 @@
+{% extends "admin_base.html" %}
+
+{% block jsincludes %}
+<script type="text/javascript" src="/static/js/passwd_modal.js"></script>
+{% endblock %}
+
+{% block cssincludes %}
+<link rel="stylesheet" href="/static/css/passwd_modal.css" type="text/css" />
+{% endblock %}
+
+{% block specific %}
+<div class="grid_3 left m_left30">
+<div class="black fz24 fw m_bottom">{{ language.tools }}</div>
+	<div class="block_tools radius left">
+		<ul>
+			<li class="left br"><span class="left list"></span><a class="fz18" href="/seiscreen/event-list/">{{ language.browse_events }}</a></li>
+			<li class="left br"><span class="left events"></span><a class="fz18" href="/seiscreen/latest-events/">{{ language.event_list }}</a></li>
+			<li class="left"><span class="left add"></span><a id="pass_link" class="fz18" href="#">{{ language.change_pass }}</a></li>
+			{% if admin %}
+			<li class="left"><span class="left events_glob"></span><a id="screen_link" class="fz18" href="/seiscreen/screen/" target="_blank">{{ language.seiscreen }}</a></li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+
+<div class="grid_3 left m_left30 m_top20">
+	<div class="black fz24 fw m_bottom">
+	{{ language.screen_settings }} 
+	{% if errors %}
+	<span class="error_message">{{ language.settings_error }}</span>
+	{% endif %}
+	</div>
+	<div class=" block_settings radius left">
+		<ul>
+		    <li class="br">
+				<span class="events left"></span><span class="fz18">{{ language.events_map }}</span>
+				<div class="number info_number right">
+					<input id="events_map" name="events_map" type="text" value="{{ settings.events_map }}"/>
+					<span class="plus quantity_cart grey"></span><br/>
+					<span class="minus quantity_cart grey"></span>
+				</div>
+			</li>
+			<li class="br">
+				<span class="zoom left"></span><span class="fz18">{{ language.minimap_zoom }}</span>
+				<div class="number info_number right">
+					<input id="minimap_zoom" name="minimap_zoom" type="text" value="{{ settings.minimap_zoom }}"/>
+					<span class="plus quantity_cart grey"></span><br/>
+					<span class="minus quantity_cart grey"></span>
+				</div>
+			</li>
+			<li>
+				<span class="custom left"></span><span class="fz18">{{ language.custom_message }}</span>
+			</li>
+				<form method="post" action="/seiscreen/admin-save/">
+					<input id="fevents_map" name="events_map" type="hidden" value="0">
+					<input id="fevents_minimap" name="events_minimap" type="hidden" value="0">
+					<input id="fminimap_zoom" name="minimap_zoom" type="hidden" value="0">
+					<textarea  id="custom_message" name="custom_message">{{ settings.custom_message }}</textarea>
+					{% csrf_token %}
+					<input id="save_settings" type="submit" class="button" value="{{ language.save }}"  />
+				</form>
+		</ul>
+	</div>
+</div>
+{% endblock %}

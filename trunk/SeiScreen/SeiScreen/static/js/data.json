@@ -1,0 +1,77 @@
+{  "latest_local": 
+		{"status": "automatic", "country": "cl", "region": "Northern Chile", "lon": "-69.356", "depth": "31.167", "mag": "3.245", "time": 1344401011, "lat": "-20.163", "id": 623}, 
+	
+	"latest_local_list": [
+		{"region": "Northern Chile", "id": 623, "time": 800547415}, 
+		{"region": "Bolivia-Chile Region", "id": 621, "time": 1123433430}, 
+		{"region": "Bolivia Region", "id": 618, "time": 1344401011}, 
+		{"region": "Chile-Bolivia Border", "id": 617, "time": 1344333370}, 
+		{"region": "Northern Chile", "id": 616, "time": 1344377868}
+		], 
+	
+	"latest_global": 
+	
+		{"status": "automatic", "country": "mx", "region": "Near Coast of Chiapas, Mexico", "lon": "-92.741", "depth": "90.000", "mag": "5.372", "time": 1343564531, "lat": "14.167", "id": 567},
+	
+	"connection_status": 
+	
+		{"status": "1"}, 
+		
+	"local_event_list":[
+	
+		{"lat": "-18.163", "color": "1", "lon": "-53.356", "id": 623, "mag": "7.265"}, 
+		{"lat": "-16.920", "color": "3", "lon": "-58.383", "id": 621, "mag": "3.352"}, 
+		{"lat": "-25.496", "color": "4", "lon": "-55.170", "id": 618, "mag": "9.700"}, 
+		{"lat": "-20.888", "color": "2", "lon": "-61.052", "id": 617, "mag": "3.801"}, 
+		{"lat": "-27.847", "color": "3", "lon": "-69.404", "id": 616, "mag": "3.249"},
+		{"lat": "54.827", "color": "2", "lon": "-71.245", "id": 622, "mag": "5.245"}, 
+		{"lat": "25.855", "color": "4", "lon": "64.847", "id": 620, "mag": "5.634"}, 
+		{"lat": "38.299", "color": "4", "lon": "56.460", "id": 619, "mag": "4.849"}, 
+		{"lat": "-25.268", "color": "2", "lon": "-68.440", "id": 500, "mag": "3.321"}, 
+		{"lat": "-20.426", "color": "4", "lon": "-68.961", "id": 599, "mag": "3.708"}, 
+		{"lat": "-29.413", "color": "2", "lon": "-68.601", "id": 508, "mag": "3.028"}, 
+		{"lat": "-23.496", "color": "2", "lon": "-65.170", "id": 615, "mag": "4.700"}, 
+		{"lat": "-16.636", "color": "3", "lon": "-69.771", "id": 614, "mag": "5.173"}, 
+		{"lat": "-23.356", "color": "4", "lon": "-63.448", "id": 613, "mag": "4.514"}, 
+		{"lat": "-23.146", "color": "2", "lon": "-69.436", "id": 612, "mag": "3.886"}, 
+		{"lat": "-21.305", "color": "4", "lon": "-69.821", "id": 611, "mag": "4.681"}, 
+		{"lat": "-22.747", "color": "4", "lon": "-69.820", "id": 610, "mag": "2.902"}, 
+		{"lat": "-20.443", "color": "4", "lon": "-69.265", "id": 609, "mag": "2.925"}, 
+		{"lat": "-22.107", "color": "4", "lon": "-68.580", "id": 608, "mag": "3.343"}, 
+		{"lat": "-34.457", "color": "2", "lon": "-73.452", "id": 607, "mag": "6.008"}, 
+		{"lat": "3.030", "color": "4", "lon": "128.355", "id": 606, "mag": "5.688"}, 
+		{"lat": "-22.878", "color": "3", "lon": "-68.909", "id": 605, "mag": "3.453"}, 
+		{"lat": "29.678", "color": "4", "lon": "130.614", "id": 604, "mag": "5.390"}, 
+		{"lat": "-22.769", "color": "4", "lon": "-69.125", "id": 603, "mag": "3.135"}, 
+		{"lat": "-21.963", "color": "4", "lon": "-69.025", "id": 602, "mag": "2.827"}
+],
+		
+	
+	"global_event_list": [
+		{"lat": "-28.163", "color": "1", "lon": "-53.356", "id": 623, "mag": "4.265", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-21.920", "color": "3", "lon": "-68.383", "id": 621, "mag": "4.352", "country":"Brazil", "time": 1348578176}, 
+		{"lat": "-23.496", "color": "4", "lon": "-65.170", "id": 615, "mag": "1.700", "country":"Serbia", "time": 1348231096}, 
+		{"lat": "-20.888", "color": "2", "lon": "-60.052", "id": 597, "mag": "9.801", "country":"Italy", "time": 1348284975}, 
+		{"lat": "-22.847", "color": "3", "lon": "-69.404", "id": 599, "mag": "1.249", "country":"Chile", "time": 1278952176},
+		{"lat": "54.827", "color": "2", "lon": "-161.245", "id": 622, "mag": "5.245", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "25.855", "color": "4", "lon": "124.847", "id": 620, "mag": "5.634", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "48.299", "color": "4", "lon": "146.460", "id": 619, "mag": "4.849", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-25.268", "color": "2", "lon": "-68.440", "id": 618, "mag": "3.321", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-20.426", "color": "4", "lon": "-68.961", "id": 617, "mag": "3.708", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-29.413", "color": "2", "lon": "-68.601", "id": 616, "mag": "3.028", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-23.496", "color": "2", "lon": "-65.170", "id": 615, "mag": "4.700", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-16.636", "color": "3", "lon": "-69.771", "id": 614, "mag": "5.173", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-23.356", "color": "4", "lon": "-63.448", "id": 613, "mag": "4.514", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-23.146", "color": "2", "lon": "-69.436", "id": 612, "mag": "3.886", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-21.305", "color": "4", "lon": "-69.821", "id": 611, "mag": "4.681", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-22.747", "color": "4", "lon": "-69.820", "id": 610, "mag": "2.902", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-20.443", "color": "4", "lon": "-69.265", "id": 609, "mag": "2.925", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-22.107", "color": "4", "lon": "-68.580", "id": 608, "mag": "3.343", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-34.457", "color": "2", "lon": "-73.452", "id": 607, "mag": "6.008", "country":"Argentina", "time": 1348232176}, 
+		{"lat": "-59.539", "color": "4", "lon": "-78.457", "id": 555, "mag": "9.373", "country":"Argentina", "time": 1348232176}
+	],
+	
+	"events":
+	
+		{"count": "6"}
+}

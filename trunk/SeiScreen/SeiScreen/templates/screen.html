@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        
+		<title>{{ language.seiscreen }}</title>
+      	
+		<!-- Jquery -->
+		<script src="/static/js/jquery-1.8.0.min.js"></script>
+	
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/style.css"/>
+	
+		<!-- Open Layers  API-->
+		<script src="/static/js/OpenLayers.js"></script>
+				
+		<script src="/static/js/main.js" type="text/javascript" ></script>
+		<!-- Globe -->
+		{% if globe %}
+		<script type="text/javascript" src="/static/js/ThreeWebGL.js"></script>
+		<script type="text/javascript" src="/static/js/ThreeExtras.js"></script>
+		<script type="text/javascript" src="/static/js/RequestAnimationFrame.js"></script>
+		<script type="text/javascript" src="/static/js/Detector.js"></script>
+		<script type="text/javascript" src="/static/js/Tween.js"></script>
+		<script type="text/javascript" src="/static/js/globe.js"></script>
+		<script type="text/javascript" src="/static/js/globe_data.js"  ></script>
+		{% else %}
+		<script src="/static/js/world_data.js" type="text/javascript" ></script>
+		{% endif %}
+		<!-- .js -->
+		<script src="/static/js/timeago.js" type="text/javascript" ></script>
+		<script src="/static/js/jquery-blink.js" type="text/javascript" ></script>
+		{% ifequal language.lang "esp" %}
+		<script src="/static/js/jquery.timeago.es.js" type="text/javascript" ></script>
+		{% endifequal %}
+		<script src="/static/js/ini.js" type="text/javascript" ></script>
+		
+
+	</head>
+	<body>
+	    <div id="basicMap"></div>
+        <div id="screen">
+        <div id="title" class="nice_title">
+            <img id="logo" alt="logo" src="/static/img/flags/{{ country }}.png"/>
+            <h1 id="title_text">{{ screen_title }}</h1>
+            <div id="time" class="nice_value">00:00:00</div>
+            <img id="signal" src="/static/img/signal_low.png" />
+        </div>
+        <div id="local-maps">
+            <div class="local-map">
+                <div class="smap-container"><div id="local-1" class="smap"></div></div>
+                <img src="/static/img/geo-1.png" id="geo-1" class="geo-icon"></img>
+                <span id="info-1" class="local-info"></span>
+            </div>
+
+            <div class="local-map">
+                <div class="smap-container"><div id="local-2" class="smap"></div></div>
+                <img src="/static/img/geo-2.png" id="geo-2" class="geo-icon"></img>
+                <span id="info-2" class="local-info"></span>
+            </div>
+
+            <div class="local-map">
+                <div class="smap-container"><div id="local-3" class="smap"></div></div>
+                <img src="/static/img/geo-3.png" id="geo-3" class="geo-icon"></img>
+                <span id="info-3" class="local-info"></span>
+            </div>
+
+            <div class="local-map">
+                <div class="smap-container"><div id="local-4" class="smap" ></div></div>
+                <img src="/static/img/geo-4.png" id="geo-4" class="geo-icon"></img>
+                <span id="info-4" class="local-info"></span>
+            </div>
+
+            <div class="local-map">
+                <div class="smap-container"><div id="local-5" class="smap"></div></div>
+                <img src="/static/img/geo-5.png" id="geo-5" class="geo-icon"></img>
+                <span id="info-5" class="local-info"></span>
+            </div>
+        </div>
+        <div id="smallmaps">
+            
+            <div id="worldinfo">
+                <div id="titleGlobe" class="nice_title small_title">
+                    <img id="globe1" alt="GlobeIco" src="/static/img/globe1.png"/>
+                    <div id="worldtitle_text" class="title_text">{{ language.world_title_text }}</div>
+                	<span id="global_info"></span>
+                	<span id="global_ago"></span>
+                </div>
+                {% if globe %}
+                <div id="globeContainer"></div>
+                {% else %}
+                <canvas id="mapContainer" class="map_box"></canvas>
+                {% endif %}
+            </div>
+        </div>
+		
+		<div id="bar">
+			<ul>
+					<li id="bar_logo">
+					<div id="posL">
+						<img id="bosopt" alt="logo" src="/static/img/osop-logo-large.png"/><span class="tosopt">{{ language.developed }}</span>
+					</div>
+					<div id="posR">
+						<span class="ltopt">Map imagery</span>
+						<span class="c">©</span>
+						<span class="lbottomt">openstreetmap contributors</span>
+						<img id="os_logo" alt="logo" src="/static/img/os_logo.png"/><span id="holder"></span>
+					</div>
+				</li>
+			
+				<li id="bar_inst">
+                    <img id="flag" alt="logo" src="/static/img/logos/{{ institution }}.png"/><span id="text">{{ custom_text }}</span>
+				</li>
+	
+				<li id="bar_llocal">
+					<img id="local_marker" alt="event" src=""/>{{ language.latest_local }}: <span class="dark"><b>{{ language.magnitude }}</b>&nbsp;</span><span class="value nice_value" id="value1">""</span>&nbsp;
+												 <span class="dark"><b>{{ language.depth }}</b>&nbsp;</span><span class="value nice_value" id="depth1">""</span>
+												 <span class="dark"><b>{{ language.time }}</b>&nbsp;</span><span class="time_value nice_value" id="time1">""</span>
+												 <span class="dark"><b>{{ language.stations }}</b>&nbsp;</span><span class="value nice_value" id="stations1">""</span>
+												 <span class="dark"><b>{{ language.status }}</b>&nbsp;</span><span class="value nice_value" id="status1">""</span>
+				</li>
+		
+				<li id="bar_clegend"> 
+					<div id="posL">
+						<img alt="red_circle2" src="/static/img/red_circle1.png" style="margin:0px 0px -14px 0;"/><span class="value_date nice_value">{{ language.latest }}</span> 
+						<img alt="blue_circle2" src="/static/img/blue_circle1.png" style="margin:0px 2px -14px 8px;"/><span class="value_date nice_value">{{ language.today }}</span>
+						<img alt="gray_circle2" src="/static/img/gray_circle1.png" style="margin:0px 2px -14px 5px;"/><span class="value_date nice_value">&nbsp;{{ older_events }}</span>
+					</div>
+				</li>
+			
+				<li id="bar_lglobal">
+					{{ language.latest_global }}: <span class="dark"><b>{{ language.magnitude }}</b>&nbsp;</span><span class="value nice_value" id="Gvalue1">""</span>&nbsp;
+												  <span class="dark"><b>{{ language.depth }}</b>&nbsp;</span><span class="value nice_value" id="Gdepth1">""</span> 
+												  <span class="dark"><b>{{ language.time }}</b>&nbsp;</span><span class="time_value nice_value" id="Gtime1">""</span>
+												  <span class="dark"><b>{{ language.stations }}</b>&nbsp;</span><span class="value nice_value" id="Gstations1">""</span>
+												  <span class="dark"><b>{{ language.status }}</b>&nbsp;</span><span class="value nice_value" id="Gstatus1">""</span>
+				</li>
+	   
+				<li id="bar_mlegend">
+					<div id="posL">
+						<img alt="red_circle1" src="/static/img/red_circle1.png" style="margin:-18px 9px -16px 5px;"/><span class="value_magnitude nice_value">7-9</span>
+						<img alt="red_circle2" src="/static/img/red_circle2.png" style="margin:-5px 7px -8px 10px;"/><span class="value_magnitude nice_value">6-7</span>
+						<img alt="red_circle3" src="/static/img/red_circle3.png" style="margin:0 9px -5px 10px;"/><span class="value_magnitude nice_value">4-6</span>
+						<img alt="red_circle4" src="/static/img/red_circle4.png" style="margin:0 10px -2px 10px;"/><span class="value_magnitude nice_value">0-4</span>
+					</div>
+				</li> 
+			</ul>
+		</div>
+		</div>
+	</body>
+</html>

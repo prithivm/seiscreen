@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/templates/admin/auth/user
+END
+change_password.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/templates/admin/auth/user/change_password.html
+END
+add_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/templates/admin/auth/user/add_form.html
+END

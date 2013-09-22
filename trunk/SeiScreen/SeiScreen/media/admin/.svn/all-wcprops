@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin
+END
+util.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/util.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/__init__.py
+END
+actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/actions.py
+END
+helpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/helpers.py
+END
+filterspecs.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/filterspecs.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/models.py
+END
+widgets.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/widgets.py
+END
+sites.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/sites.py
+END
+validation.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/validation.py
+END
+options.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/seiscreen/!svn/ver/8/trunk/SeiScreen/SeiScreen/media/admin/options.py
+END
