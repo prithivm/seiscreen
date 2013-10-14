@@ -1,0 +1,40 @@
+{% extends "admin_base.html" %}
+{% block specific %}
+<div class="grid_3 left m_left30 m_top20">
+	<div class="black fz24 fw m_bottom">{{ language.event_filters }}</div>
+	<div class=" block_settings radius left">
+		<ul>
+			<li class="br">
+				<span class="events left"></span><span class="fz18">{{ language.mabove }}</span>
+				<div class="number info_number right">
+					<input id="m_thresh" type="text" value="1"/>
+					<span class="plus quantity_cart grey"></span><br/>
+					<span class="minus quantity_cart grey"></span>
+				</div>
+			</li>
+			<li class="br">
+				<span class="events_glob left"></span><span class="fz18">{{ language.localonly }}</span>
+				<div class="number info_number right">
+					<input id="region_selector" type="text" value="Yes"/>
+					<span class="plus quantity_cart grey"></span><br/>
+					<span class="minus quantity_cart grey"></span>
+				</div>
+			</li>
+			<li>
+				<span class="speed left"></span><span class="fz18">{{ language.days }}</span>
+				<div class="number info_number right">
+					<input id="days" type="text" value="1"/>
+					<span class="plus quantity_cart grey"></span><br/>
+					<span class="minus quantity_cart grey"></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<input id="fetch_events" type="button" class="button right" value="{{ language.browse }}"  />
+	<a id="back_button" class="button right" href="/seiscreen/admin-screen/" >{{ language.back }}</a>
+</div>
+
+<div id="events_block" class="grid_3_evn left m_left30 m_top50">
+
+</div>
+{% endblock %}

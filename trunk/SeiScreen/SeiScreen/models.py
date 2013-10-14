@@ -19,9 +19,7 @@ class Event(models.Model):
     status = models.CharField(max_length=15, null=False)
     relocation = models.IntegerField(null=False)
     server = models.CharField(max_length=10, null=False)
-    
-    def __unicode__(self):
-        return self.event_id
+
 
 
 class Settings(models.Model):
@@ -42,8 +40,8 @@ class Settings(models.Model):
     map_zoom = models.IntegerField()
     minimap_zoom = models.IntegerField()
     
-    def __unicode__(self):
-		return "%s-%s" % (self.language, self.client.user)
+    #def __unicode__(self):
+	#	return "%s-%s" % (self.language, self.client.user)
 
     
 
@@ -56,8 +54,7 @@ class Client(models.Model):
     logo = models.ImageField(upload_to=lambda i, f: 'users/%s/%s' % (i.user.username, f))
     ip_address = models.CharField(max_length=16)
     
-    def __unicode__(self):
-        return "%s-%s" % (self.user, self.country)
+    
     
 
 class Language(models.Model):
@@ -119,8 +116,7 @@ class Language(models.Model):
     world_title_text = models.CharField(max_length=50)
     local_title_text = models.CharField(max_length=50)
     
-    def __unicode__(self):
-        return self.lang
+    
         
 
 class SettingsChange(models.Model):
@@ -145,8 +141,8 @@ class SettingsChange(models.Model):
     map_zoom = models.IntegerField()
     minimap_zoom = models.IntegerField()
     
-    def __unicode__(self):
-        return '%s-%s' % (self.date, self.user)
+    #def __unicode__(self):
+    #    return '%s-%s' % (self.date, self.user)
     
 
 class Server(models.Model):

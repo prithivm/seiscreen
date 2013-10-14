@@ -1,0 +1,86 @@
+<div class="black fz24 fw m_bottom">{{ language.relevant }}</div>
+<div class="block_event radius left">
+		<span class="left fzp12">{{ relevant.date }} {{ relevant.region }}</span>
+		<span class="left m_left5">{{ language.mag }}</span>
+		<div class="number evn_input left">
+			<input type="text" value="{{ relevant.magnitude }}"/>
+		</div>
+		<span class="left m_left5">{{ language.depthshort }}</span>
+		<div class="number evn_input left">
+			<input type="text" value="{{ relevant.depth }}"/>
+		</div>
+		<span class="left m_left5">{{ language.latshort }}.</span>
+		<div class="number evn_input left bigger_number">
+			<input type="text" value="{{ relevant.latitude }}"/>
+		</div>
+		<span class="left m_left5">{{ language.lonshort }}.</span>
+		<div class="number evn_input left bigger_number">
+			<input type="text" value="{{ relevant.longitude }}"/>
+		</div>
+		<span class="left m_left5">RMS</span>
+		<div class="number evn_input left">
+			<input type="text" value="{{ relevant.rms }}"/>
+		</div>
+</div>
+<div id="event_list_area" class="grid_3_evn left m_top20 scroll radius p_content ">
+	<div id="page_content" class="scroll-pane">
+		<table class="event_table" border=0>
+			<tr>
+				<th>{{ language.date }}</th>
+				<th>{{ language.location }}</th>
+				<th>{{ language.magnitude }}</th>
+				<th>{{ language.depth }}</th>
+				<th>{{ language.latitude }}</th>
+				<th>{{ language.longitude }}</th>
+				<th>{{ language.stations }}</th>
+				<th>RMS</th>
+			</tr>
+			{% for event in queried %}
+			<tr>
+				<td>
+					<span>{{ event.date }}</span>
+				</td>
+				<td>
+					<span>{{ event.region }}</span>
+				</td>
+				<td>
+					<div class="number evn_input">
+						<input type="text" value="{{ event.magnitude }}"/>
+					</div>
+				</td>
+				<td>
+					<div class="number evn_input">
+						<input type="text" value="{{ event.depth }}"/>
+					</div>
+				</td>
+				<td>
+					<div class="number evn_input bigger_number">
+						<input type="text" value="{{ event.latitude }}"/>
+					</div>
+				</td>
+				<td>
+					<div class="number evn_input bigger_number">
+						<input type="text" value="{{ event.longitude }}"/>
+					</div>
+				</td>
+				<td>
+					<div class="number evn_input">
+						<input type="text" value="{{ event.stations }}"/>
+					</div>
+				</td>
+				<td>
+					<div class="number evn_input">
+						<input type="text" value="{{ event.rms }}"/>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>		
+<!--
+<div class="grid_4 right m_top20">
+	<a id="print_button" href="#" class="print">
+		<div class="white fz18">{{ language.printlist }}<img src="/static/img/print.png" title="" alt=""/></div>
+	</a>
+</div> -->
